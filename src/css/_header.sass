@@ -76,7 +76,7 @@ $header_logo: './img/logo.png'
 .map_link
   position: relative
   display: inline-block
-  margin: 3px 0px 0px -5px
+  margin: -8px 0px 0px -5px
   padding: 14px 26px 12px 22px
   font-size: 18px
   a
@@ -101,7 +101,6 @@ $header_logo: './img/logo.png'
   height: 25px
 
 .header_navigation
-  font-size: 21px
   @include clearfix()
   .left_side
     float: left
@@ -112,13 +111,16 @@ $header_logo: './img/logo.png'
     padding: 0
     box-sizing: border-box
     color: $header_link
-    span
+    text-align: left
   .right_side
     width: 210px
     float: right
+  .center_side
+    margin: 0 210px
 
 .search
   position: relative
+  margin-top: -2px
 
 .search-inner
   height: 40px
@@ -126,12 +128,10 @@ $header_logo: './img/logo.png'
 
 input.search-input
   font-size: 14px
-  font-family: Arial, Helvetica, sans-serif
   background: none
   outline: none
   width: 200px
   padding: 5px 30px 5px 15px
-  margin: 12px 0 0 0
   border: 1px solid #414042
   background-color: transparent
   box-shadow: none
@@ -145,7 +145,7 @@ input.search-input
 .search_button
   position: absolute
   right: 9px
-  bottom: 0
+  top: 0
   border: none
   width: 30px
   height: 28px
@@ -159,3 +159,12 @@ input.search-input
   background-position: 0 -958px
   width: 14px
   height: 14px
+
+.header_links
+  text-align: center
+  margin-top: 12px
+
+.header_links_link
+  display: inline-block
+  padding: 0 8px
+  font-size: 18px
