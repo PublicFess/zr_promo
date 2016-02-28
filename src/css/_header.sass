@@ -29,11 +29,10 @@ $header_logo: './img/logo.png'
       position: relative
       z-index: 1
     &.active
+      @include red_skew_bg()
       span
         border: none
         color: $header_link
-      &:after
-        @include red_skew_bg()
 
 .header_container
   padding: 25px 40px 9px 20px
@@ -47,6 +46,7 @@ $header_logo: './img/logo.png'
     text-align: center
 
 .user_info
+  position: relative
   text-align: right
   display: flex
   align-items: center
@@ -55,6 +55,8 @@ $header_logo: './img/logo.png'
 .user_info_link
   padding: 8px
   position: relative
+  a
+
   span
     position: relative
     z-index: 1
@@ -63,14 +65,15 @@ $header_logo: './img/logo.png'
   position: absolute
   font-size: 12px
   padding: 0px 4px
-  top: -12px
-  right: -14px
+  top: 4px
+  right: -8px
   font-style: italic
+  a
+    @include red_skew_bg()
   span
     position: relative
     z-index: 1
-  &:after
-    @include red_skew_bg()
+
 
 
 .map_link
@@ -79,6 +82,7 @@ $header_logo: './img/logo.png'
   margin: -8px 0px 0px -5px
   padding: 14px 26px 12px 22px
   font-size: 18px
+  @include red_skew_bg()
   a
     span
       padding: 4px 0 0 1px
@@ -90,8 +94,6 @@ $header_logo: './img/logo.png'
   *
     position: relative
     z-index: 1
-  &:after
-    @include red_skew_bg()
 
 .map_image
   float: left
