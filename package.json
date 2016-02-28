@@ -1,0 +1,25 @@
+{
+  "name": "zr_promo",
+  "version": "1.0.0",
+  "description": "promo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Shuklin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-batch": "^1.0.5",
+    "gulp-browserify": "*",
+    "gulp-data": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "run-sequence": "^1.1.4"
+  }
+}

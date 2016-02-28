@@ -1,0 +1,22 @@
+{
+  "name": "delivery-client2.0",
+  "description": "New delivery client",
+  "main": "index.js",
+  "authors": [
+    "Indotech"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^1.12.1"
+  }
+}
