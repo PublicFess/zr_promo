@@ -1,15 +1,21 @@
 $header_height: 150px
 $header_img: './img/head-pattern.png'
+$header_logo: './img/logo.png'
 
 .header
   height: $header_height
   background: url($header_img) repeat
   position: relative
   a
-    color: #fff
+    color: $header_link
     text-decoration: none
     span
       border-bottom: 1px solid rgba(255, 255, 255, .3)
+      transition: color .2s,border-bottom-color .2s
+    &:hover
+      color: $header_active_link
+      span
+        border-bottom: 1px solid $header_active_link_border
 .top_choicer
   position: absolute
   top: 0
@@ -25,14 +31,43 @@ $header_img: './img/head-pattern.png'
     &.active
       span
         border: none
+        color: $header_link
       &:after
-        content: ''
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        z-index: 0
-        display: block
-        background: #E40025
-        transform: skewX(-10deg)
+        @include red_skew_bg()
+
+.header_container
+  padding: 25px 40px 9px 20px
+
+.left_side
+  width: 230px
+  float: left
+
+.user_info
+  text-align: right
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.user_info_link
+  padding: 8px
+  position: relative
+  span
+    position: relative
+    z-index: 1
+
+.notify_counter
+  position: absolute
+  font-size: 12px
+  padding: 0px 4px
+  top: -12px
+  right: -14px
+  font-style: italic
+  span
+    position: relative
+    z-index: 1
+  &:after
+    @include red_skew_bg()
+
+.right_side
+  margin: 0 250px 0 230px
+  text-align: center
