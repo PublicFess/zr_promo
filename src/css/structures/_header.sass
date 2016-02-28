@@ -1,0 +1,184 @@
+$header_height: 150px
+$header_img: './img/head-pattern.png'
+$header_logo: './img/logo.png'
+
+.header
+  height: $header_height
+  background: url($header_img) repeat
+  position: relative
+  z-index: 10
+  a
+    color: $header_link
+    text-decoration: none
+    span
+      border-bottom: 1px solid rgba(255, 255, 255, .3)
+      transition: color .2s,border-bottom-color .2s
+    &:hover
+      color: $header_active_link
+      span
+        border-bottom: 1px solid $header_active_link_border
+.top_choicer
+  position: absolute
+  top: 0
+  right: 0
+  padding: 8px
+  a
+    font-size: 16px
+    padding: 8px 16px
+    position: relative
+    span
+      position: relative
+      z-index: 1
+    &.active
+      @include red_skew_bg()
+      span
+        border: none
+        color: $header_link
+
+.header_container
+  padding: 25px 40px 9px 20px
+
+  .left_side
+    width: 230px
+    float: left
+
+  .right_side
+    margin: 0 250px 0 230px
+    text-align: center
+
+.user_info
+  position: relative
+  text-align: right
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.user_info_link
+  padding: 8px
+  position: relative
+  a
+
+  span
+    position: relative
+    z-index: 1
+
+.notify_counter
+  position: absolute
+  font-size: 12px
+  padding: 0px 4px
+  top: 4px
+  right: -8px
+  font-style: italic
+  a
+    @include red_skew_bg()
+  span
+    position: relative
+    z-index: 1
+
+
+
+.map_link
+  position: relative
+  display: inline-block
+  margin: -8px 0px 0px -5px
+  padding: 14px 26px 12px 22px
+  font-size: 18px
+  @include red_skew_bg()
+  a
+    span
+      padding: 4px 0 0 1px
+      line-height: 18px
+      border-bottom-style: dotted
+    &:hover
+      span
+        color: $header_link
+  *
+    position: relative
+    z-index: 1
+
+.map_image
+  float: left
+  background: url($sprites)
+  background-position: 0 -1128px
+  width: 25px
+  height: 25px
+
+.header_navigation
+  @include clearfix()
+  .left_side
+    float: left
+    margin-right: -100%
+    position: relative
+    left: 0
+    width: 210px
+    padding: 0
+    box-sizing: border-box
+    color: $header_link
+    text-align: left
+  .right_side
+    width: 210px
+    float: right
+  .center_side
+    margin: 0 210px
+
+.search
+  position: relative
+  margin-top: -2px
+
+.search-inner
+  height: 40px
+  line-height: 40px
+
+input.search-input
+  font-size: 14px
+  background: none
+  outline: none
+  width: 200px
+  padding: 5px 30px 5px 15px
+  border: 1px solid #000
+  background-color: transparent
+  box-shadow: none
+  box-sizing: border-box
+  border-radius: 4px
+  color: #414042
+  &:focus
+    background: $search_background
+    color: #333
+
+.search_button
+  position: absolute
+  right: 9px
+  top: 0
+  border: none
+  width: 30px
+  height: 28px
+  background-color: transparent
+  text-indent: 9999em
+  cursor: pointer
+  overflow: hidden
+
+.search_icon
+  background: url($sprites)
+  background-position: 0 -958px
+  width: 14px
+  height: 14px
+
+.header_links
+  text-align: center
+  margin-top: 12px
+
+.header_links_link
+  display: inline-block
+  padding: 0 8px
+  font-size: 18px
+
+@media screen and (max-width: 1280px)
+  input.search-input
+    width: 150px
+  .header_navigation
+    .left_side
+      width: 150px
+    .center_side
+      margin: 0 150px
+    .right_side
+      width: 160px

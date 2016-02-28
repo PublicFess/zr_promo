@@ -66,6 +66,11 @@ gulp.task('copyImg', function() {
   .pipe(gulp.dest('./dist/img'));
 });
 
+gulp.task('copyFonts', function() {
+  gulp.src('src/fonts/*')
+  .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.task('build', function(cb) {
   runSequence(
     'css:watch',
@@ -74,6 +79,7 @@ gulp.task('build', function(cb) {
     'jsLibs:watch',
     'dev:watcher',
     'copyImg',
+    'copyFonts',
     'server',
-    cb)
+    cb);
 });
