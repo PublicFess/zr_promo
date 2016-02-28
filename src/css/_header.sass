@@ -1,6 +1,38 @@
 $header_height: 150px
 $header_img: './img/head-pattern.png'
 
-#header
+.header
   height: $header_height
   background: url($header_img) repeat
+  position: relative
+  a
+    color: #fff
+    text-decoration: none
+    span
+      border-bottom: 1px solid rgba(255, 255, 255, .3)
+.top_choicer
+  position: absolute
+  top: 0
+  right: 0
+  padding: 8px
+  a
+    font-size: 16px
+    padding: 8px 16px
+    position: relative
+    span
+      position: relative
+      z-index: 1
+    &.active
+      span
+        border: none
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 0
+        display: block
+        background: #E40025
+        transform: skewX(-10deg)
