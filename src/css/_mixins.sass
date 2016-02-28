@@ -8,4 +8,10 @@
   z-index: 0
   display: block
   background: $header_active_link
-  transform: skewX(-10deg)
+  transform: skewX(-8deg)
+
+@mixin clearfix
+  &:after 
+    content: ""
+    display: table
+    clear: both
